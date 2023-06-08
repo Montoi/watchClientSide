@@ -1,0 +1,119 @@
+
+/*=============== FEATURED ===============*/
+.featured__container {
+    row-gap: 2.5rem;
+  }
+  
+  .featured__card {
+    position: relative;
+    text-align: center;
+    background-color: var(--container-color);
+    padding-top: 2rem;
+    border: 1px solid var(--border-color);
+    overflow-y: hidden;
+    transition: .3s;
+  }
+  
+  .featured__tag {
+    background-color: var(--first-color);
+    padding: .5rem 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -1rem;
+    top: 3rem;
+  }
+  
+  .featured__img {
+    height: 214px;
+    margin-bottom: var(--mb-1);
+  }
+  
+  .featured__title, 
+  .featured__price {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+  }
+  
+  .featured__title {
+    text-transform: uppercase;
+    margin-bottom: var(--mb-0-75);
+  }
+  
+  .featured__price {
+    display: block;
+    color: var(--first-color);
+    transition: .3s;
+  }
+  
+  .featured__button {
+    font-size: var(--small-font-size);
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  
+  .featured__card:hover {
+    box-shadow: 0 12px 32px hsla(0, 0%, 20%, .1);
+    padding: 2rem 0 3rem 0;
+  }
+  
+  .featured__card:hover .featured__button {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .featured__card:hover .featured__price {
+    margin-bottom: var(--mb-1-5);
+  }
+
+  
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+ 
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .featured__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .section {
+    padding: 8rem 0 1rem;
+  }
+
+  .featured__title,
+  .featured__price{
+    font-size: var(--normal-font-size);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .featured__container {
+    grid-template-columns: repeat(3, 312px);
+    padding-top: 2rem;
+  }
+  
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}

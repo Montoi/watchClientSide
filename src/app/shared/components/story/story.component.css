@@ -1,0 +1,116 @@
+
+/*=============== STORY ===============*/
+.story__container {
+    row-gap: 7.5rem;
+  }
+  
+  .story__title {
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-1);
+  }
+  
+  .story__description {
+    margin-bottom: var(--mb-2-5);
+  }
+  
+  .story__images {
+    position: relative;
+  }
+  
+  .story__img, 
+  .story__square {
+    width: 250px;
+  }
+  
+  .story__square {
+    height: 250px;
+    background-color: var(--first-color);
+  }
+  
+  .story__img {
+    position: absolute;
+    left: 3rem;
+    top: -3rem;
+  }
+
+  
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+    .container {
+      margin-left: var(--mb-1);
+      margin-right: var(--mb-1);
+    }
+  
+    .story__square,
+    .story__img {
+      width: 180px;
+    }
+  
+    .story__square {
+      height: 180px;
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    .section {
+      padding: 8rem 0 1rem;
+    }
+  
+   
+  
+  
+    .story__container{
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  
+    .story__section-title {
+      text-align: initial;
+    }
+    .story__section-title::before {
+      margin: initial;
+    }
+    .story__images {
+      order: -1;
+    }
+  
+  }
+  
+  @media screen and (min-width: 992px) {
+   
+  
+    .story__container{
+      column-gap: 8rem;
+    }
+  
+    .story__square,
+    .story__img{
+      width: 450px;
+    }
+  
+    .story__square {
+      height: 450px;
+    } 
+  }
+  
+  /* For large devices */
+  @media screen and (min-width: 1024px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .story__container{
+      column-gap: 13rem;
+    }
+  
+    .story__container {
+      padding-top: 3rem;
+    }
+    .story__img {
+      left: 5rem;
+      top: -5rem;
+    }
+
+  }
